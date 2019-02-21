@@ -3,20 +3,23 @@ export const INCREMENT = 'INCREMENT'
 export const DECREMENT = 'DECREMENT'
 export const RESET = 'RESET'
 
-export const increment = () => {
+export const increment = (index) => {
     return {
-        type: INCREMENT
+        type: INCREMENT,
+        payload: index
     }
 }
 
-export const decrement = () => {
+export const decrement = (index) => {
     return {
-        type: DECREMENT
+        type: DECREMENT,
+        payload: index
     }
 }
 
-export const reset = () => {
+export const reset = (index) => {
     return {
-        type: RESET
+        type: RESET,
+        payload: index
     }
 }

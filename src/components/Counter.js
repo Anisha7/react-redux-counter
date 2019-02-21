@@ -4,13 +4,14 @@ import { increment, decrement, reset } from '../actions/'
 
 class Counter extends Component {
   render() {
+    const { index, increment, decrement, reset, counters } = this.props
     return (
       <div>
-        <h1>{this.props.count}</h1>
+        <h1>{counters[index]}</h1>
         <p>
-          <button onClick={this.props.decrement}> - </button>
-          <button onClick={this.props.increment}> + </button>
-          <button onClick={this.props.reset}> reset </button>
+          <button onClick={() => increment(index)}> + </button>
+          <button onClick={() => decrement(index)}> - </button>
+          <button onClick={() => reset(index)}> reset </button>
         </p>
       </div>
     )
@@ -20,7 +21,7 @@ class Counter extends Component {
 // takes state and maps it to redux
 const mapStateToProps = (state) => {
   return {
-    count: state.count
+    counters: state.counters
   }
 }
 

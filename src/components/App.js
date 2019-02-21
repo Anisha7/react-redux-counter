@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import './App.css';
-import Counter from './Counter'
+import CounterList from './CounterList'
+import Total from './Total'
 import { reducers } from '../reducers/'
 
 const store = createStore(reducers)
@@ -14,7 +15,8 @@ class App extends Component {
       // connects redux with react
       <Provider store={store}>
         <div className="App">
-          <Counter />
+          <CounterList />
+          <Total />
         </div>
       </Provider>
     );

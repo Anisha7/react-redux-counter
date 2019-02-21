@@ -4,5 +4,5 @@ import counterReducer from './counterReducer';
 
 // object store
 export const reducers = combineReducers( {
-    count: counterReducer
+    counters: counterReducer
 })
