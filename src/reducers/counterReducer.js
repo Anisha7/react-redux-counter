@@ -1,6 +1,6 @@
-import { INCREMENT, DECREMENT, RESET } from '../actions/'
+import { INCREMENT, DECREMENT, RESET, ADDCOUNTER } from '../actions/'
 
-const defaultState = [99, 101, 23]
+const defaultState = [0, 0, 0]
 // redux will call every reducer twice with undefined state value
 // thus, initialize value in function parameters
 const counterReducer = (state = defaultState, action) => {
@@ -27,6 +27,8 @@ const counterReducer = (state = defaultState, action) => {
                 }
                 return count
             })
+        case ADDCOUNTER:
+            defaultState.push(0)
         // if not modified
         default:
             return state

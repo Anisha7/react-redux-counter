@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { increment, decrement, reset } from '../actions/'
+import { increment, decrement, reset} from '../actions/'
 
 class Counter extends Component {
   render() {
@@ -30,7 +30,7 @@ const mapDispatchToProps = () => {
   return {
     increment,
     decrement,
-    reset
+    reset,
   }
 }
 
