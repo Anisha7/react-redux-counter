@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET, ADDCOUNTER } from '../actions/'
+import { INCREMENT, DECREMENT, RESET, ADD_COUNTER } from '../actions/'
 
 const defaultState = [0, 0, 0]
 // redux will call every reducer twice with undefined state value
@@ -27,8 +27,11 @@ const counterReducer = (state = defaultState, action) => {
                 }
                 return count
             })
-        case ADDCOUNTER:
-            defaultState.push(0)
+        case ADD_COUNTER:
+            // must create new array. Lets use spread operator then add one more val at end
+            // a shallow copy
+            console.log([...state, 0])
+            return [...state, 0]
         // if not modified
         default:
             return state

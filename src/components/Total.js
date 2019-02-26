@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { increment, decrement, reset } from '../actions/'
+// import { increment, decrement, reset } from '../actions/'
 
 class Total extends Component {
   render() {

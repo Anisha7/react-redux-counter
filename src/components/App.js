@@ -5,6 +5,7 @@ import './App.css';
 import CounterList from './CounterList'
 import Total from './Total'
 import { reducers } from '../reducers/'
+import AddCounter from './AddCounter'
 
 const store = createStore(reducers)
 
@@ -15,6 +16,7 @@ class App extends Component {
       // connects redux with react
       <Provider store={store}>
         <div className="App">
+          <AddCounter />
           <CounterList />
           <Total />
         </div>

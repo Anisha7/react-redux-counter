@@ -3,7 +3,7 @@ export const INCREMENT = 'INCREMENT'
 export const DECREMENT = 'DECREMENT'
 export const RESET = 'RESET'
 // add counter feature
-export const ADDCOUNTER = 'ADDCOUNTER'
+export const ADD_COUNTER = 'ADD_COUNTER'
 
 export const increment = (index) => {
     return {
@@ -26,8 +26,8 @@ export const reset = (index) => {
     }
 }
 
-export const addcounter = () => {
+export const addCounter = () => {
     return {
-        type: ADDCOUNTER
+        type: ADD_COUNTER
     }
 }
