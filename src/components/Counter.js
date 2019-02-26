@@ -6,8 +6,9 @@ class Counter extends Component {
   render() {
     const { index, increment, decrement, reset, counters } = this.props
     return (
-      <div>
-        <h1>{counters[index]}</h1>
+      <div class="counter">
+        <h2>{counters[index].name}</h2>
+        <h1>{counters[index].count}</h1>
         <p>
           <button onClick={() => increment(index)}> + </button>
           <button onClick={() => decrement(index)}> - </button>

@@ -4,11 +4,27 @@ import { connect } from 'react-redux'
 import { addCounter } from '../actions/'
 
 class AddCounter extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            counterName: ""
+        }
+    }
+
     render() {
         const { addCounter } = this.props
         return (
             <div>
-                <button onClick = {() => addCounter()}>Add Counter</button>
+                <input 
+                    type="text" 
+                    value={this.state.counterName} 
+                    onChange={(e) => this.setState({ counterName: e.target.value })}
+                />
+                <button class = "addCounter" onClick = {() => {
+                    addCounter(this.state.counterName)
+                    this.setState({ counterName: "" })
+                }}>Add Counter</button>
             </div>
         )
     }

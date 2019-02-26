@@ -26,8 +26,9 @@ export const reset = (index) => {
     }
 }
 
-export const addCounter = () => {
+export const addCounter = (name) => {
     return {
-        type: ADD_COUNTER
+        type: ADD_COUNTER,
+        payload: name
     }
 }

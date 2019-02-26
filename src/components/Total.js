@@ -7,6 +7,7 @@ class Total extends Component {
     const { total } = this.props
     return (
       <div>
+        <h1> Total </h1>
         <h1> {total} </h1>
       </div>
     )
@@ -16,7 +17,7 @@ class Total extends Component {
 // takes state and maps it to redux
 const mapStateToProps = (state) => {
   return {
-    total: state.counters.reduce((acc, count) => acc + count)
+    total: state.counters.reduce((acc, obj) => acc + obj.count, 0)
   }
 }
 

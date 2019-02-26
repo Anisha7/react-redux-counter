@@ -31,3 +31,21 @@
     transform: rotate(360deg);
   }
 }
+
+input, .addCounter {
+  border: 1px solid black;
+  margin: 20px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.addCounter {
+  padding-right: 30px;
+  padding-left: 30px;
+  background-color: lightskyblue;
+}
+
+.counter {
+  border: 1px solid palevioletred;
+  margin: 10px;
+}
